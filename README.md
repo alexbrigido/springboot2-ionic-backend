@@ -2,6 +2,7 @@
 
 1. Acrescentar a dependência do Tomcat no pom como provided:
 
+```
 <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -9,13 +10,17 @@
         <scope>provided</scope>
     </dependency>
 </dependencies>
+```
 
 2. Modificar o tipo de pacote par war:
 
+```
 <packaging>war</packaging>
+```
 
 3. Modificar a super classe na classe principal de execução para extender a SpringBootServletInitializer:
 
+```
 @SpringBootApplication
 @EnableSwagger2
 public class SpringBootDemoApplication extends SpringBootServletInitializer {
@@ -27,4 +32,5 @@ public class SpringBootDemoApplication extends SpringBootServletInitializer {
     SpringApplication.run(SpringBootDemoApplication.class, args);
   }
 }
+```
 
